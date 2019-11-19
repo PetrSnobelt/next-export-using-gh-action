@@ -1,0 +1,39 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Cache node_modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.OS }}-npm-cache-${{ env.cache-name }}-
+          ${{ runner.OS }}-npm-cache-
+
+    - name: Install Dependencies
+      run: yarn install
+
+    - name: build, and export
+      run: |
+        yarn build
+        yarn next export
+      env:
+        CI: true
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./out
