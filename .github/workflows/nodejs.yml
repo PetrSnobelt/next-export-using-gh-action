@@ -26,11 +26,14 @@ jobs:
         path: node_modules
         key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
+          ${{ runner.OS }}-npm-cache-${{ env.cache-name }}-
           ${{ runner.OS }}-npm-cache-
 
-    - name: npm install, build, and export
+    - name: Install Dependencies
+      run: yarn install
+
+    - name: build, and export
       run: |
-        yarn install
         yarn build
         yarn next export
       env:
