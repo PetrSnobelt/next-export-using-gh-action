@@ -1,0 +1,21 @@
+{
+  "name": "with-styled-components",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@kiwicom/orbit-components": "latest",
+    "next": "latest",
+    "react": "^16.12.00",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@kiwicom/babel-plugin-orbit-components": "latest",
+    "babel-plugin-styled-components": "^1.10.6"
+  },
+  "license": "ISC"
+}
