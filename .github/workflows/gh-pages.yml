@@ -21,8 +21,17 @@ jobs:
           ${{ runner.OS }}-npm-cache-${{ env.cache-name }}-
           ${{ runner.OS }}-npm-cache-
 
+    - name: Cache next build
+      uses: actions/cache@v1
+      with:
+        path: .next/cache
+        key: ${{ runner.OS }}-next-build-cache-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.OS }}-next-build-cache-${{ env.cache-name }}-
+          ${{ runner.OS }}-next-build-cache-
+
     - name: Install Dependencies
-      run: yarn install
+      run: yarn install --frozen-lockfile
 
     - name: build, and export
       run: |
