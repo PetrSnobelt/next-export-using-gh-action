@@ -23,4 +23,9 @@ context('Window', () => {
     // https://on.cypress.io/title
     cy.get("body").should('include.text', 'Works')
   })
+
+  it("go to next page after clicking on link", () => {
+    cy.get("a").click()
+    cy.url().should('include', '/dynamic-import')
+  })
 })
