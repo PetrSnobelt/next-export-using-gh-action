@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@kiwicom/orbit-components": "latest",
+    "cypress": "^3.6.1",
     "next": "latest",
     "react": "^16.12.00",
     "react-cowsay": "^0.1.0",
