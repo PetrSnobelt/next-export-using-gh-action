@@ -9,7 +9,7 @@ export default () => {
         It Works!
       </Alert>
       <Illustration name="Success" />
-      <Link href="/dynamic-import">
+      <Link href="dynamic-import">
         <a>Dynamic-import sample</a>
       </Link>
     </React.Fragment>
