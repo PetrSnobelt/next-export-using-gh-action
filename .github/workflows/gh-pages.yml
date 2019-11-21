@@ -37,6 +37,8 @@ jobs:
       run: |
         yarn build
         yarn next export
+        # nojekyll allow files or directories that start with underscores since Jekyll considers these to be special resources and does not copy them to the final site.
+        touch touch out/.nojekyll
       env:
         CI: true
 
