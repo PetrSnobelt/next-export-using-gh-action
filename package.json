@@ -6,6 +6,10 @@
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PetrSnobelt/next-export-using-gh-action.git"
+  },
   "dependencies": {
     "@kiwicom/orbit-components": "latest",
     "next": "latest",
