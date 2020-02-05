@@ -12,7 +12,7 @@ const DynamicComponent = dynamic(import("react-emojipicker"), {
 })
 
 const DynamicComponentWithDelay = dynamic(
-  () => delay(1000).then(() => console.log("start loading emoji picker")).then((props) => {
+  () => delay(3000).then(() => console.log("start loading emoji picker")).then((props) => {
     return import("react-emojipicker")
   }),
   {
@@ -37,7 +37,12 @@ function Home() {
     <div>
       <p>Dynamic component example!</p>
       { !show && <button onClick={() => toggle((prev)=> !prev)} >Show emoji picker</button>}
+      {/* This loads Dynamic component only after show is set */}
       { show && <DynamicComponentWithDelay onEmojiSelected={setEmoji} />}
+      {/* This loads dynamic component after page load, but displays it only after show is set */}
+      <div hidden={!show}>
+        <DynamicComponentWithDelay onEmojiSelected={setEmoji} />
+      </div>
       {emoji && <Alert onClose={() => setEmoji(null)} closable><Emoji>{emoji.unicode}</Emoji></Alert>}
     </div>
   )
