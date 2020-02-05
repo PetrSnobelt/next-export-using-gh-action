@@ -18,5 +18,6 @@ yarn create next-app --example with-orbit-components with-orbit-components-app
 
 For this purpose we are extending `<App />` of injected `<ThemeProvider/>`, and also adding `@kiwicom/babel-plugin-orbit-components`
 
-## GH action 
+## GH actions
 https://github.com/peaceiris/actions-gh-pages#1-add-ssh-deploy-key
+https://github.com/cypress-io/github-action
