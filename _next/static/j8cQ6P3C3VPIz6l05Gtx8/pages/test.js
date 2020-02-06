@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{FCuQ:function(n,t,u){"use strict";u.r(t);var e=u("q1tI"),o=u.n(e).a.createElement;t.default=function(){return o("h1",null,"Just test to GH pages")}},"zl3/":function(n,t,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/test",function(){return u("FCuQ")}])}},[["zl3/",0,1]]]);
