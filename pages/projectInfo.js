@@ -1,8 +1,8 @@
 import React from 'react'
-// import Link from 'next/link'
+import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-import Link from 'data-prefetch-link'
+// import Link from 'data-prefetch-link'
 
 function Index(props) {
   return (
