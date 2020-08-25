@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/dynamic-import":[a],"/index":[a],"/react-lazy":[a]}}("static\u002Fchunks\u002Ffaa0181c827ca4a0b4747a7bb77e8c0e5b97e308.b746ee529258d2e3c4f9.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
