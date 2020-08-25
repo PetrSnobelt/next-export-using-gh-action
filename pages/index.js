@@ -9,9 +9,14 @@ export default () => {
         It Works!
       </Alert>
       <Illustration name="Success" />
-      <Link href="/dynamic-import" as={`${process.env.PREFIX}/dynamic-import`} >
-        <a>Dynamic-import sample</a>
-      </Link>
+      <nav>
+        <Link href="/dynamic-import" as={`${process.env.PREFIX}/dynamic-import`} >
+          <a>Dynamic-import sample</a>
+        </Link>
+        <Link href="/dynamic-import" as={`${process.env.PREFIX}/react-lazy`} >
+          <a>React-lazy sample</a>
+        </Link>
+      </nav>
     </React.Fragment>
   )
 }
